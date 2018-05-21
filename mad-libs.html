@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title> Rose's Ridicu-libs</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<body>
+	<h1>Rose's Ridicu-libs</h1>
+	<section>
+		<div>
+            <label>Name?
+                <input id= "name" type = "text">
+            </label>
+        <br>
+            <label>Race?
+                <select id= "race">
+                    <option value= "Troll">Troll</option>
+                    <option value= "Ninja">Ninja</option>
+                    <option value= "Unicorn">Unicorn</option>
+                    <option value= "Pirate">Pirate</option>
+                </select>
+            </label>
+           <br>
+            <label>Favorite Number?
+                <input id= "number" type= "number" placeholder= "7">
+            </label>
+        <br>
+            <label> Favorite Color?
+                <input id= "color" type= "text">
+            </label>
+       
+        <br>
+            <label>Noun
+                <input id= "noun" type= "text">
+            </label>
+        <br>
+            <label>Adjective
+                <input id= "adj" type= "text">
+            </label>
+        <br>
+            <label>Adjective 2
+                <input id= "adj2" type= "text">
+            </label>
+        <br>
+            <label>Verb
+                <input id= "verb" type= "text">
+            </label>
+        <br>
+        	<label>Enemy?
+        		<select id= "enemy">
+        			<option value= "Trolls">Trolls</option>
+        			<option value= "Ninjas">Ninjas</option>
+        			<option value= "Unicorns">Unicorns</option>
+        			<option value= "Pirates">Pirates</option>
+        		</select>
+        	</label>
+        <br>
+            <button id= "button" type= "button">Your Cray Story</button>
+
+            <div id= "story"></div>
+     <!--    Space for Picture
+            <div id= "img"></div>
+
+        -->
+
+        </div>
+	</section>
+
+	<script type="text/javascript">
+		var button = document.getElementById("button");
+
+
+		var doIt = function(){
+			var storyDiv = document.getElementById("story");
+            //          Put Image
+			//var imgDiv = document.getElementById("img");
+			var name = document.getElementById("name").value;
+			var race = document.getElementById("race").value;
+			var number = document.getElementById("number").value;
+			var color = document.getElementById("color").value;
+			var noun = document.getElementById("noun").value;
+			var adj = document.getElementById("adj").value;
+            var adj2 = document.getElementById("adj2").value;
+			var verb = document.getElementById("verb").value;
+            var enemy = document.getElementById("enemy").value;
+
+			storyDiv.innerHTML = 
+
+            "Welcome to our ranks " + adj + " " + race + "! My goal here today is to determine how best you will serve our King and Queen " + race +". Now before I began, I will give you this " + noun + " " + "as a symbol of .... Did you just eat the " + noun + "? Did you even " + verb + " " + "before gobbling it down? I will give you another " + noun + " " + "because I appreciate how " + adj2 + " " + "you are but please resist eating it this time. Don't look at me with those " + adj + " " + "eyes, if you are to be a " + race + " " + "in our army, you will need to follow directions. Ok, now for training... wait....did you hear that? It's them!! The " + adj2 + ", evil " + enemy + ". Well they say first had experience is the best way to learn. It looks like there are " + number + " " + enemy + ". Just stick with me kid, and don't strike until you see the " + color + " in their eyes!";
+
+        
+
+            //      /Image URLs and attempting to get images to show up
+
+			//imgDiv.innerHTML = "img/troll.jpeg";
+		}
+
+		/*    var raceImg = function(){
+			var race = document.getElementById("race");
+
+			if (race.value === "Trolls") {
+				img.src="img/troll.jpeg";
+			}
+
+            
+
+            function raceImg(userRace) {
+    var output = document.getElementById("img");
+    output.innerHTML = "";
+    
+    var links = [    
+        "http://3.bp.blogspot.com/-6uGtKUUTmcU/U6yMUbgtwiI/AAAAAAAAAEs/iotjEC-IioU/s1600/Lucy_Ninja.png",
+
+                "https://pridepassionbelief.files.wordpress.com/2014/10/copyright-troll.jpg",
+                
+              "http://3.bp.blogspot.com/-GL-JfPHCj3I/Tb_zrNTOZbI/AAAAAAAAABw/X8BByO04uSY/s1600/Eastern+Europe+Unicorn.jpg",
+              
+              "http://www.commetrex.com/wp-content/uploads/2011/11/pirate7.jpg"
+    ];
+    
+  var img = '<img src="' + links[userRace] + '">';
+    
+    output.innerHTML = img;
+}
+
+    
+	*/	
+        
+        button.addEventListener ('click', doIt);
+
+
+	</script>
+
+
+</body>
+
+
+</html>
