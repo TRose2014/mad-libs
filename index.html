@@ -60,12 +60,8 @@
             <button id= "button" type= "button">Your Cray Story</button>
 
             <div id= "story"></div>
-     <!--    Space for Picture
-            <div id= "img"></div>
-
-        -->
-
-        </div>
+     <!-- Space for Picture -->
+            <img id= "default" src = "http://72gpf1za5iq428ekh3r7qjc1.wpengine.netdna-cdn.com/wp-content/uploads/2015/04/storytelling.jpg" alt="What is your story?" width = "500px" height = "300px"/>
 	</section>
 
 	<script type="text/javascript">
@@ -75,7 +71,7 @@
 		var doIt = function(){
 			var storyDiv = document.getElementById("story");
             //          Put Image
-			//var imgDiv = document.getElementById("img");
+			var defaultJS = document.getElementById("default").value;
 			var name = document.getElementById("name").value;
 			var race = document.getElementById("race").value;
 			var number = document.getElementById("number").value;
@@ -85,56 +81,32 @@
             var adj2 = document.getElementById("adj2").value;
 			var verb = document.getElementById("verb").value;
             var enemy = document.getElementById("enemy").value;
+            var img = "http://72gpf1za5iq428ekh3r7qjc1.wpengine.netdna-cdn.com/wp-content/uploads/2015/04/storytelling.jpg"
 
-			storyDiv.innerHTML = 
-
+			
+            storyDiv.innerHTML = 
+            //Story
             "Welcome to our ranks " + adj + " " + race + "! My goal here today is to determine how best you will serve our King and Queen " + race +". Now before I begin, I will give you this " + noun + " " + "as a symbol of .... Did you just eat the " + noun + "? Did you even " + verb + " " + "before gobbling it down? I will give you another " + noun + " " + "because I appreciate how " + adj2 + " " + "you are but please resist eating it this time. Don't look at me with those " + adj + " " + "eyes, if you are to be a " + race + " " + "in our army, you will need to follow directions. Ok, now for training... wait....did you hear that? It's them!! The " + adj2 + ", evil " + enemy + ". Well they say first hand experience is the best way to learn. It looks like there are " + number + " " + enemy + ". Just stick with me kid, and don't strike until you see the " + color + " in their eyes!";
 
-        
+            //Changes picture based on users race
+            var raceEl = document.getElementById("race").value;
+            if (raceEl === "Troll"){
+                document.getElementById("default").src = "https://pridepassionbelief.files.wordpress.com/2014/10/copyright-troll.jpg";
+        } else if (raceEl === "Ninja"){
+                document.getElementById("default").src = "http://3.bp.blogspot.com/-6uGtKUUTmcU/U6yMUbgtwiI/AAAAAAAAAEs/iotjEC-IioU/s1600/Lucy_Ninja.png";
+        } else if (raceEl === "Unicorn"){
+                document.getElementById("default").src = "http://3.bp.blogspot.com/-GL-JfPHCj3I/Tb_zrNTOZbI/AAAAAAAAABw/X8BByO04uSY/s1600/Eastern+Europe+Unicorn.jpg";
+        } else {
+                document.getElementById("default"). src = "http://www.commetrex.com/wp-content/uploads/2011/11/pirate7.jpg";
+        }
 
-            //      /Image URLs and attempting to get images to show up
-
-			//imgDiv.innerHTML = "img/troll.jpeg";
 		}
-
-		/*    var raceImg = function(){
-			var race = document.getElementById("race");
-
-			if (race.value === "Trolls") {
-				img.src="img/troll.jpeg";
-			}
-
-            
-
-            function raceImg(userRace) {
-    var output = document.getElementById("img");
-    output.innerHTML = "";
-    
-    var links = [    
-        "http://3.bp.blogspot.com/-6uGtKUUTmcU/U6yMUbgtwiI/AAAAAAAAAEs/iotjEC-IioU/s1600/Lucy_Ninja.png",
-
-                "https://pridepassionbelief.files.wordpress.com/2014/10/copyright-troll.jpg",
-                
-              "http://3.bp.blogspot.com/-GL-JfPHCj3I/Tb_zrNTOZbI/AAAAAAAAABw/X8BByO04uSY/s1600/Eastern+Europe+Unicorn.jpg",
-              
-              "http://www.commetrex.com/wp-content/uploads/2011/11/pirate7.jpg"
-    ];
-    
-  var img = '<img src="' + links[userRace] + '">';
-    
-    output.innerHTML = img;
-}
-
-    
-	*/	
         
         button.addEventListener ('click', doIt);
 
 
 	</script>
 
-
 </body>
-
 
 </html>
